@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Note</title>
+    <link rel="stylesheet" href="bday.css">
+</head>
+<body>
+
+    <audio id="bgMusic" loop>
+        <source src="bday.mp3" type="audio/mpeg">
+    </audio>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let audio = document.getElementById("bgMusic");
+            audio.play().catch(() => {
+                // If autoplay is blocked, wait for user interaction
+                document.addEventListener("click", () => {
+                    audio.play();
+                }, { once: true });
+            });
+        });
+    </script>
+    <div class="note-container">
+        <div class="note-content">
+            <div class="text-section">
+                <h1>Happy Birthday Tanvi! 🎉</h1>
+                <p>
+                    We’ve known each other for years—same school, same tuition—yet never spoke a word.  
+                    Then COVID-19 happened, and our friendship started through texts.  
+                    No calls, no meetings, just endless messages, and somehow, that was enough to build something truly special.  
+                </p>
+                <p>
+                    Honestly, I wasn’t the nicest at first—rude, sarcastic, always teasing you for being short 😆.  
+                    But despite all that, you stuck around. From random jokes to deep conversations,  
+                    from roasting each other to actually having each other’s backs, this friendship has been amazing.  
+                </p>
+                <p>
+                    So, on your special day, stay as you are, keep smiling, and be ready for more teasing  
+                    because some things never change! 😜  
+                </p>
+                <h2>Happy Birthday! 🎂✨</h2>
+                
+                <!-- Back button -->
+                <a href="index.html" class="back-button">Back to Card</a>
+            </div>
+
+            <div class="image-section">
+                <img src="centre.png" alt="Happy Birthday Tanvi!">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
